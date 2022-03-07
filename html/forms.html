@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+  </head>
+  <body>
+    <form action="register.php">
+      <div>
+        <label for="name">Ad</label>
+        <input type="text" id="name" />
+      </div>
+
+      <div>
+        <label for="surname">Soyad</label>
+        <input type="text" id="surname" />
+      </div>
+
+      <div>
+        <label for="parola">Şifre</label>
+        <input type="password" id="parola" />
+      </div>
+
+      <div>
+        <label for="intro">Açıklama</label>
+        <textarea id="intro" cols="30"></textarea>
+      </div>
+
+      <div>
+        <p>En sevdiğin Programlama dili</p>
+        <input
+          type="radio"
+          id="html"
+          name="programlama"
+        /><!-- Aynı name bilgisi girilirse sadece bir adet seçilebilir. -->
+
+        <label for="html">html</label>
+
+        <input type="radio" id="css" name="programlama" />
+        <label for="css">css</label>
+
+        <input type="radio" id="javascript" name="programlama" />
+        <label for="javascript">javascript</label>
+      </div>
+
+      <div>
+        <p>En sevdiğin Programlama dili</p>
+        <input type="checkbox" id="html2" />
+
+        <label for="html2">html</label>
+
+        <input type="checkbox" id="css2" />
+        <label for="css2">css</label>
+
+        <input type="checkbox" id="javascript2" />
+        <label for="javascript2">javascript</label>
+      </div>
+
+      <div>
+        <label for="cities">Şehir</label>
+        <select id="cities">
+          <option value="41">Kocaeli</option>
+          <option value="34">İstanbul</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="eposta">Email</label>
+        <input type="email" id="eposta" />
+      </div>
+
+      <div>
+        <label for="day">Birthday:</label>
+        <input type="date" name="birthday" id="day" />
+      </div>
+
+      <div>
+        <label for="renk">Sevdiğin Renk:</label>
+        <input type="color" name="renk" id="renk" />
+      </div>
+
+      <button type="submit">Kaydet</button>
+
+      <button type="reset">Temizle</button>
+    </form>
+  </body>
+</html>

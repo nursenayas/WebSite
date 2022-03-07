@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kayıt Ol</title>
+  </head>
+  <body>
+
+    <nav>
+      <a href="index.html">Anasayfa</a>
+      <a href="en_iyi_filmler.html">En İyi Filmler</a>
+      <a href="kayit_ol.html">Kayıt Ol</a>
+    </nav>
+    <h1>Lütfen Formu Eksiksiz Doldurunuz</h1>
+    <hr />
+
+    <form action="register.html">
+      <h3>Hesap Bilgileriniz</h3>
+
+      <table>
+        <tr>
+          <td style="width: 120px;">
+            <label for="kulad">Kullanıcı Adı: </label>
+          </td>
+          <td style="width: 50px"></td>
+          <td>
+            <input
+              type="text"
+              name="kulad"
+              id="kulad"
+              placeholder="Kullanıcı Adı Giriniz"
+            />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label for="mail">Email: </label>
+          </td>
+          <td></td>
+          <td>
+            <input
+              type="email"
+              name="mail"
+              id="mail"
+              placeholder="Email Giriniz"
+            />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label for="parola">Şifre: </label>
+          </td>
+          <td></td>
+          <td>
+            <input
+              type="password"
+              name="parola"
+              id="parola"
+              placeholder="Parola giriniz"
+            />
+          </td>
+        </tr>
+      </table>
+
+      <h3>Kişisel Bilgileriniz</h3>
+
+      <table>
+        <tr>
+          <td style="width: 120px;"><label for="ad">Adınız: </label></td>
+          <td style="width: 50px"></td>
+          <td>
+            <input type="text" name="ad" id="ad" placeholder="adınızı giriniz" />
+          </td>
+        </tr>
+
+        <tr>
+          <td><label for="soyad">Soyadınız: </label></td>
+          <td></td>
+          <td>
+            <input
+              type="text"
+              name="soyad"
+              id="soyad"
+              placeholder="soyadı giriniz"
+            />
+          </td>
+        </tr>
+
+        <tr>
+          <td><label for="il">Şehir: </label></td>
+          <td></td>
+          <td>
+            <select id="cities">
+              <option>Seçiniz</option>
+              <option>Ankara</option>
+              <option>İzmir</option>
+              <option>Batman</option>
+            </select>
+          </td>
+        </tr>
+
+        <tr>
+          <td><label for="cinsiyet">Cinsiyet:</label></td>
+          <td></td>
+          <td>
+            <input type="radio" name="cinsiyet" id="erkek" />
+            <label for="erkek">Erkek </label>
+            <input type="radio" name="cinsiyet" id="kadin" />
+            <label for="kadin">Kadın </label>
+          </td>
+        </tr>
+
+        <tr>
+          <td><label for="cinsiyet">Cinsiyet:</label></td>
+          <td></td>
+          <td>
+            <input type="radio" name="cinsiyet" id="erkek" />
+            <label for="erkek">Erkek </label>
+            <input type="radio" name="cinsiyet" id="kadin" />
+            <label for="kadin">Kadın </label>
+          </td>
+        </tr>
+
+        <tr>
+          <td><label for="hobi">Hobileriniz:</label></td>
+          <td></td>
+          <td>
+            <input type="checkbox" name="sinema" id="sinema" />
+            <label for="sinema">Sinema </label>
+            <input type="checkbox" name="spor" id="spor" />
+            <label for="spor">Spor </label>
+            <input type="checkbox" name="yuruyus" id="yuruyus" />
+            <label for="yuruyus">Yürüyüş </label
+            ><input type="checkbox" name="kitap" id="kitap" />
+            <label for="kitap">Kitap Okumak </label>
+          </td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td></td>
+          <td><button type="submit">Kaydet</button></td>
+        </tr>
+      </table>
+
+    </form>
+  </body>
+</html>
