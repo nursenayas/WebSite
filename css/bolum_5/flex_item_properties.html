@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    .container {
+      display: flex;
+
+      height: 500px;
+      background-color: cornflowerblue;
+    }
+
+    .item {
+      background-color: aqua;
+      padding: 30px;
+      margin: 20px;
+      color: aliceblue;
+      font-size: 25px;
+
+      flex: 0 1 200px;
+      /*grow shrink basis */
+
+      /* flex-grow: 0; içerik kadar büyür. */
+      /* flex-grow: 1; Container kaplayacak kadar büyür. */
+    }
+
+    .item1 {
+      order: 1;
+      /* flex-grow: 1; */
+      flex: 25%;
+    }
+
+    .item2 {
+      /* flex-grow: 2; */
+      order: 2;
+
+      flex: 25%;
+
+    }
+
+    .item3 {
+      order: -3;
+
+      /* flex-basis: 200px;
+        flex-shrink: 0;  
+        flex-shrink: 1; 
+        */
+      flex: 50%;
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="item item1">İtem1</div>
+    <div class="item item2">İtem2</div>
+    <div class="item item3">İtem3</div>
+
+  </div>
+</body>
+
+</html>

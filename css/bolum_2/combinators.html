@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Combinators</title>
+    <style>
+      div ~ p {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Combinators -->
+
+    <!-- 1- Descandant Selector () div altında olan bütün p etiketleri kapsar
+     div p{
+            background-color: red;
+
+        } -->
+
+    <!-- 2- Child Selector (>)  sadece child div altındaki elemanlar alınır section alınmaz
+    div > p{
+            background-color: red;
+
+        } -->
+    <p>1.paragraf</p>
+    <div>
+      <p>2.Paragraf</p>
+      <p>3.Paragraf</p>
+
+      <section>
+        <p>4.paragraf</p>
+      </section>
+    </div>
+    <p>5.paragraf</p>
+    <p>6.paragraf</p>
+
+    <!-- 3- Adjacent Sibling Selector (+) div den sonra gelen tek elemanı kapsar    div + p {
+        background-color: red;
+      } -->
+    <!-- 4- General sibling Selector(~)   divden sonra gelen tüm elemanlar
+        div ~ p {
+        background-color: red;
+      } -->
+  </body>
+</html>

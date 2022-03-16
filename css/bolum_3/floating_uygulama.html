@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Floating Uygulama</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      h1 {
+        margin: 0;
+      }
+      h2 {
+        width: 99%;
+        background-color: lightcoral;
+        padding: 30px;
+        color: aliceblue;
+      }
+
+      span {
+        background-color: darksalmon;
+        color: aliceblue;
+        padding: 12px;
+        height: 150px;
+      }
+
+      .left {
+        width: 25%;
+      }
+
+      .right {
+        width: 75%;
+      }
+      .col {
+        float: left;
+        padding: 15px 15px 15px 0;
+      }
+
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      li {
+        background-color: darkorange;
+        padding: 10px;
+        margin-bottom: 8px;
+        color: aliceblue;
+      }
+      li:hover {
+        cursor: pointer;
+        background-color: chocolate;
+      }
+
+      .clearfix::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h2>Header</h2>
+    </header>
+
+    <main class="clearfix">
+      <div class="left col">
+        <ul>
+          <li>Html</li>
+          <li>Css</li>
+          <li>Javascript</li>
+        </ul>
+      </div>
+
+      <div class="right col">
+        <h1>Komple Web Geliştirme Eğitimi</h1>
+
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio
+          velit, iure fugiat suscipit nostrum incidunt hic veritatis? Odit
+          exercitationem quam expedita illo! Non a commodi libero sapiente, quam
+          molestiae dolorum.
+        </p>
+
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+          voluptatibus dolorum est itaque eligendi ipsum quis, pariatur fuga
+          doloremque, voluptates labore consectetur ratione ipsam in aspernatur
+          repellat saepe officiis dignissimos?
+        </p>
+      </div>
+    </main>
+
+    <footer>
+      <h2 class="box1">Footer</h2>
+    </footer>
+  </body>
+</html>

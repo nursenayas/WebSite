@@ -1,0 +1,47 @@
+.btn {
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 7px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+  transition-duration: 0.6s;
+}
+
+.btn_primary {
+  background-color: coral;
+  color: aliceblue;
+  border: 2px solid coral;
+}
+
+.btn_primary:hover {
+  background-color: aliceblue;
+  color: coral;
+  border: 2px solid coral;
+}
+
+.btn_outline_primary {
+  background-color: aliceblue;
+  color: coral;
+  border: 2px solid coral;
+}
+
+.btn_outline_primary:hover {
+  background-color: coral;
+  color: aliceblue;
+  border: 2px solid coral;
+}
+
+.btn_secondary {
+  background-color: rgb(106, 80, 255);
+  color: aliceblue;
+  border: 2px solid rgb(106, 80, 255);
+}
+
+.btn_secondary:hover {
+  background-color: aliceblue;
+  color: rgb(106, 80, 255);
+  border: 2px solid rgb(106, 80, 255);
+}

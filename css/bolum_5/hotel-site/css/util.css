@@ -1,0 +1,285 @@
+:root {
+  --white: rgb(233, 218, 218);
+  --primary: #1a518b;
+  --secondary: #64707a;
+  --success: #34974b;
+  --danger: #be3745;
+  --warning: #f8ca3e;
+  --info: #0a92a7;
+  --dark: #222b33;
+  --light: #ecf3fa;
+}
+
+/* text color */
+.text-primary {
+  color: var(--primary);
+}
+.text-secondary {
+  color: var(--secondary);
+}
+.text-success {
+  color: var(--success);
+}
+.text-danger {
+  color: var(--danger);
+}
+.text-warning {
+  color: var(--warning);
+}
+.text-info {
+  color: var(--info);
+}
+.text-dark {
+  color: var(--dark);
+}
+.text-light {
+  color: var(--light);
+}
+
+/* bg color */
+.bg-primary {
+  background-color: var(--primary);
+}
+.bg-secondary {
+  background-color: var(--secondary);
+}
+.bg-success {
+  background-color: var(--success);
+}
+.bg-danger {
+  background-color: var(--danger);
+}
+.bg-warning {
+  background-color: var(--warning);
+}
+.bg-info {
+  background-color: var(--info);
+}
+.bg-dark {
+  background-color: var(--dark);
+}
+.bg-light {
+  background-color: var(--light);
+}
+
+/* buttons color */
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 5px;
+}
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--white);
+}
+.btn-secondary {
+  color: var(--white);
+  background-color: var(--secondary);
+}
+.btn-success {
+  color: var(--white);
+  background-color: var(--success);
+}
+.btn-danger {
+  color: var(--white);
+  background-color: var(--danger);
+}
+.btn-warning {
+  color: var(--white);
+  background-color: var(--warning);
+}
+.btn-info {
+  color: var(--white);
+  background-color: var(--info);
+}
+.btn-dark {
+  background-color: var(--dark);
+  color: var(--white);
+}
+.btn-light {
+  color: var(--dark);
+  background-color: var(--light);
+}
+
+.btn-outline-primary {
+  background: transparent;
+  border: 1px solid var(--primary);
+  color: var(--dark);
+}
+
+.btn-outline-primary:hover {
+  background: var(--primary);
+  border: 1px solid var(--primary);
+  color: var(--white);
+}
+
+.btn-outline-secondary {
+  background: transparent;
+  color: var(--dark);
+  border: 1px solid var(--secondary);
+}
+.btn-outline-secondary:hover {
+  background: var(--secondary);
+  border: 1px solid var(--secondary);
+  color: var(--white);
+}
+.btn-outline-success {
+  background: transparent;
+  color: var(--dark);
+  border: 1px solid var(--success);
+}
+.btn-outline-success:hover {
+  background: var(--success);
+  border: 1px solid var(--success);
+  color: var(--white);
+}
+.btn-outline-danger {
+  background: transparent;
+  color: var(--dark);
+  border: 1px solid var(--danger);
+}
+.btn-outline-danger:hover {
+  background: var(--danger);
+  border: 1px solid var(--danger);
+  color: var(--white);
+}
+.btn-outline-warning {
+  background: transparent;
+  color: var(--dark);
+  border: 1px solid var(--warning);
+}
+.btn-outline-warning:hover {
+  background: var(--warning);
+  border: 1px solid var(--warning);
+  color: var(--white);
+}
+.btn-outline-info {
+  background: transparent;
+  color: var(--dark);
+  border: 1px solid var(--info);
+}
+.btn-outline-info:hover {
+  background: var(--info);
+  border: 1px solid var(--info);
+  color: var(--white);
+}
+.btn-outline-dark {
+  background: transparent;
+  color: var(--dark);
+  border: 1px solid var(--dark);
+}
+.btn-outline-dark:hover {
+  background: var(--dark);
+  border: 1px solid var(--dark);
+  color: var(--white);
+}
+.btn-outline-light {
+  background: transparent;
+  color: var(--white);
+  border: 1px solid var(--light);
+}
+.btn-outline-light:hover {
+  background: var(--light);
+  border: 1px solid var(--light);
+  color: var(--dark);
+}
+/* flex items */
+.flex-items {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+.flex-items > div {
+  padding: 20px;
+  flex-basis: 100%;
+}
+
+/* flex columns */
+.flex-columns.flex-reverse .row {
+  flex-direction: row-reverse;
+}
+.flex-columns .row {
+  display: flex;
+  flex-direction: row;
+
+  flex-wrap: wrap;
+  width: 100%;
+}
+.flex-columns .column {
+  flex: 1;
+}
+.flex-columns.article .column:nth-child(odd) {
+  flex: 2;
+
+}
+ 
+.flex-columns.article .column:nth-child(even) {
+  flex: 3;
+
+}
+
+.flex-columns .column .column-1,
+.flex-columns .column .column-2 {
+  height: 100%;
+}
+.flex-columns .column-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 3rem;
+}
+.flex-columns img {
+  width: 100%;
+  height: 100%;
+}
+/* flex grid */
+.flex-grid .row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 0.4rem;
+}
+.flex-grid .column {
+  padding: 0 0.4rem;
+  flex: 25%;
+}
+/* section */
+.section-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem;
+}
+.section-header h2 {
+  font-size: 4rem;
+  margin: 2rem 0;
+}
+.section-padding {
+  padding: 2rem 2rem 4rem;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .flex-items {
+    flex-direction: column;
+  }
+  .flex-items > div {
+    padding: 10px;
+  }
+  .flex-columns .column {
+    flex: 100% !important;
+  }
+  .flex-grid .column {
+    flex: 50%;
+  }
+}

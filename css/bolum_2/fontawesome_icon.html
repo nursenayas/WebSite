@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Font Awesome</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+      }
+      #showcase {
+        background-image: url("background_image.jpg");
+        background-position: center;
+        height: 600px;
+        width: 100%;
+        padding: 10px;
+      }
+
+      .main_header {
+        background-color: blueviolet;
+        padding: 8px 16px;
+      }
+      .main_nav {
+        display: inline-block;
+        width: calc(100% - 99px);
+        text-align: right;
+      }
+      .main_nav__items {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      .main_nav__item {
+        display: inline-block;
+        margin: 0 8px;
+      }
+      .main_header__logo {
+        color: aliceblue;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 21px;
+      }
+      .main_nav__item a {
+        text-decoration: none;
+        color: #fff;
+      }
+      .main_nav__item a::before {
+        content: "\2739";
+        letter-spacing: 5px;
+      }
+      .main_nav__item a:hover {
+        color: rgb(26, 13, 37);
+      }
+      .main_nav__item a:active {
+        color: #fff;
+      }
+      .main_nav_item__login {
+        color: #fff;
+        background-color: rgb(6, 63, 63);
+        padding: 4px 16px;
+        border-radius: 8px;
+        border: 2px solid #fff;
+      }
+
+      .main_nav_item__login:hover {
+        color: rgb(23, 31, 31);
+        border: 2px solid blue;
+        background-color: #fff;
+      }
+
+      .main_nav_item__login a::before {
+        content: none;
+        letter-spacing: 5px;
+      }
+
+      #how_it_works {
+        text-align: center;
+        padding: 10px;
+      }
+
+      #how_it_works h2 {
+        color: #3e4555;
+        font-size: 30px;
+        font-weight: 600;
+      }
+
+      .row {
+        margin-bottom: 40px;
+      }
+
+      .col {
+        width: 250px;
+        display: inline-block;
+        text-align: center;
+        padding: 16px;
+        margin: 8px;
+      }
+
+      .icon_box h3 {
+        color: #3e4555;
+        font-size: 26px;
+      }
+
+      .icon_box i {
+        color: coral;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="main_header">
+      <a class="main_header__logo" href="#">MovieApp</a>
+      <nav class="main_nav">
+        <ul class="main_nav__items">
+          <li class="main_nav__item"><a href="#">Filmler</a></li>
+          <li class="main_nav__item"><a href="#">Diziler</a></li>
+          <li class="main_nav__item main_nav_item__login">
+            <a href="#">Login</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="showcase">
+        <h1>Welcome to MovieApp</h1>
+      </section>
+
+      <section id="how_it_works">
+        <div class="row">
+          <h2>How it works?</h2>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae,
+            commodi.
+          </p>
+        </div>
+
+        <div class="row">
+          <div class="icon_box col">
+            <i class="fas fa-sign-in-alt fa-3x"></i>
+            <h3>Register</h3>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae,
+              commodi.
+            </p>
+          </div>
+          <div class="icon_box col">
+            <i class="fab fa-buffer fa-3x"></i>
+            <h3>Choose a plan</h3>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae,
+              commodi.
+            </p>
+          </div>
+          <div class="icon_box col">
+            <i class="fas fa-smile fa-3x"></i>
+            <h3>Enjoy movie</h3>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae,
+              commodi.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

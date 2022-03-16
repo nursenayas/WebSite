@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        color: aliceblue;
+      }
+
+      #page-1 {
+        background-color: rgb(80, 5, 202);
+      }
+
+      #page-2 {
+        background-color: rgb(4, 63, 43);
+      }
+
+      #page-3 {
+        background-color: rgb(144, 146, 37);
+      }
+
+      .page {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+      .page h1 {
+        font-size: 5rem;
+        margin: 2rem;
+      }
+      .page p {
+        font-size: 1.5rem;
+      }
+      .btn {
+        display: inline-block;
+        padding: 1rem 2rem;
+        background-color: aquamarine;
+        color: black;
+        text-decoration: none;
+        border: none;
+        font-size: 1.2rem;
+        transition: all 0.3s ease-in;
+      }
+      .btn:hover {
+        background-color: coral;
+        color: aliceblue;
+      }
+
+      #page-1 h1 {
+        transform: translateY(-800px);
+        animation: h1_a 1s forwards ease-in;
+      }
+      #page-1 p {
+        transform: translateX(-2000px);
+        animation: p1_a 1s forwards 1s ease-in;
+      }
+
+      @keyframes h1_a {
+        to {
+          transform: translateY(0);
+        }
+      }
+      @keyframes p1_a {
+        to {
+          transform: translateX(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section id="page-1" class="page">
+      <h1>Page 1</h1>
+
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate
+        voluptate eius aspernatur quo itaque temporibus aut quos facere, optio
+        maxime magnam non blanditiis mollitia provident ab harum nobis quasi
+        pariatur.
+      </p>
+
+      <div>
+        <a href="#page-2" class="btn">Next Page</a>
+      </div>
+    </section>
+
+    <section id="page-2" class="page">
+      <h1>Page 2</h1>
+
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate
+        voluptate eius aspernatur quo itaque temporibus aut quos facere, optio
+        maxime magnam non blanditiis mollitia provident ab harum nobis quasi
+        pariatur.
+      </p>
+
+      <div>
+        <a href="#page-1" class="btn">Previous Page</a>
+        <a href="#page-3" class="btn">Next Page</a>
+      </div>
+    </section>
+
+    <section id="page-3" class="page">
+      <h1>Page 3</h1>
+
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate
+        voluptate eius aspernatur quo itaque temporibus aut quos facere, optio
+        maxime magnam non blanditiis mollitia provident ab harum nobis quasi
+        pariatur.
+      </p>
+
+      <div>
+        <a href="#page-2" class="btn">Previous Page</a>
+      </div>
+    </section>
+  </body>
+</html>

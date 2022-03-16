@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Styling Link</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+      }
+      #showcase {
+        background-color: rgb(153, 146, 67);
+        height: 500px;
+        width: 100%;
+        padding: 10px;
+      }
+
+      #how_it_works {
+        background-color: rgb(226, 43, 43);
+        padding: 10px;
+      }
+      .main_header {
+        background-color: blueviolet;
+        padding: 8px 16px;
+      }
+      .main_nav {
+        display: inline-block;
+        width: calc(100% - 99px);
+        text-align: right;
+      }
+      .main_nav__items {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      .main_nav__item {
+        display: inline-block;
+        margin: 0 8px;
+      }
+      .main_header__logo {
+        color: aliceblue;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 21px;
+      }
+      .main_nav__item a {
+        text-decoration: none;
+        color: #fff;
+      }
+      .main_nav__item a::before {
+        content: "\2739";
+        letter-spacing: 5px;
+      }
+      .main_nav__item a:hover {
+        color: rgb(26, 13, 37);
+      }
+      .main_nav__item a:active {
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="main_header">
+      <a class="main_header__logo" href="#">MovieApp</a>
+      <nav class="main_nav">
+        <ul class="main_nav__items">
+          <li class="main_nav__item"><a href="#">Home</a></li>
+          <li class="main_nav__item"><a href="#">Movies</a></li>
+          <li class="main_nav__item"><a href="#">about</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="showcase">
+        <h1>Welcome to MovieApp</h1>
+      </section>
+
+      <section id="how_it_works">
+        <h2>How it works?</h2>
+      </section>
+    </main>
+  </body>
+</html>

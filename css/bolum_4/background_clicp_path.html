@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      #header {
+        position: relative;
+        background-image: /*  linear-gradient(
+            to bottom right,
+            rgba(197, 108, 25, 0.7),
+            rgba(39, 177, 69, 0.7)
+          ),*/ url("bg.jpg");
+        height: 50vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+      }
+      #header h1 {
+        margin: 0;
+        position: absolute;
+        font-size: 60px;
+        color: rgb(85, 56, 114);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .logo {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        width: 70px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header">
+      <h1>Backgroun Text</h1>
+      <img class="logo" src="logo.png" alt="" />
+    </div>
+  </body>
+</html>

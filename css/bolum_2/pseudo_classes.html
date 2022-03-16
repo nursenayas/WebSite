@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo Claesses</title>
+    <style>
+      a {
+        border: 1px solid gray;
+        padding: 5px 8 px;
+        display: inline-block;
+        text-decoration: none;
+        width: 60px;
+        text-align: center;
+      }
+
+      /* Eğer a etiketine link atanmazsa hep kırmızı olur. Adres bilgisi yok */
+      a:link {
+        color: red;
+      }
+
+      /* Linke tıklandıktan sonra link yeşil rengini alır. */
+      a:visited {
+        color: green;
+      }
+
+      /* Link üzerine gelindiğinde bu işlem gerçekleşir. */
+      a:hover {
+        color: black;
+        background-color: yellow;
+      }
+
+      /* Linke tıklandığında bu işlem gerçekleşir. */
+      a:active {
+        color: aliceblue;
+        background-color: blueviolet;
+      }
+
+      div:hover p {
+        display: block;
+      }
+      p {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="border.html">Home</a>
+    <a href="combinators.html">About</a>
+    <a href="box_sizing.html">Products</a>
+    <br /><br />
+    <div>
+      Click Here!
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+        similique quaerat obcaecati natus magnam praesentium possimus provident
+        quis placeat reiciendis optio eos molestiae, harum culpa, facere sequi
+        nihil reprehenderit quisquam.
+      </p>
+    </div>
+  </body>
+</html>

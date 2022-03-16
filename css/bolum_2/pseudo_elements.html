@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo Elements</title>
+    <style>
+      /* İlk satırı seçer. */
+      p::first-line {
+        font-weight: bold;
+        color: aqua;
+
+        /* Kelimeler arası boşluk */
+        word-spacing: 2px;
+
+        /* Harfler arası boşluk */
+        letter-spacing: 2px;
+      }
+
+      p.about::first-line {
+        color: blue;
+      }
+      /* İlk harfleri seçer */
+      p::first-letter {
+        font-size: 40px;
+      }
+      /* Seçilen yazıya etki eder. */
+      ::selection {
+        background-color: bisque;
+      }
+
+      p::selection {
+        background-color: bisque;
+      }
+
+      p::before {
+        content: "\270D";
+      }
+
+      p::after {
+        content: "\270D";
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa et neque
+      assumenda temporibus id excepturi corrupti quis eum magni vitae eligendi
+      voluptates nam facere ex, eaque, inventore aliquid, maxime autem.
+    </p>
+
+    <p class="about">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt quod,
+      ab soluta suscipit, quia explicabo recusandae accusamus eaque cupiditate
+      porro quisquam doloribus labore, sint aut! Alias, fuga architecto. Iusto,
+      totam?
+    </p>
+  </body>
+</html>
