@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+    />
+    <title></title>
+    <style>
+      a {
+        color: white;
+      }
+
+      #header {
+        font-size: 25px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script>
+      let personProto = {
+        calculateAge: function () {
+          return 2022 - this.yearOfBirth;
+        },
+      };
+
+
+      let yigit = Object.create(personProto);
+      
+      yigit.name = "yiğit";
+      yigit.yearOfBirth = 2010;
+      yigit.job = "student";
+
+      console.log(yigit);
+      console.log(yigit.calculateAge());
+
+
+      
+
+      let emel = Object.create(personProto,
+      {
+        name : {value : "emel"},
+        yearOfBirth : {value : 1997},
+        job : {value : "teacher"}
+      });
+      
+
+      console.log(emel);
+      console.log(emel.calculateAge());
+
+
+
+    </script>
+  </body>
+</html>

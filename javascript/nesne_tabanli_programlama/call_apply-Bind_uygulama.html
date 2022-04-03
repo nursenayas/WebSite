@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+    />
+    <title></title>
+    <style>
+      a {
+        color: white;
+      }
+
+      #header {
+        font-size: 25px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script>
+      var num = {
+        min: 0,
+        max: 100,
+        checkNumericRange: function (value) {
+          if (typeof value !== "number") {
+            return false;
+          } else {
+            return value >= this.min && value <= this.max;
+          }
+        }
+      };
+
+      console.log(num.checkNumericRange(20));
+      console.log(num.checkNumericRange(-20));
+
+      var num1 = { min: 50, max: 60 };
+      console.log(num.checkNumericRange.call(num1, 65));
+      console.log(num.checkNumericRange.apply(num1, [52]));
+
+      var checkNumber = num.checkNumericRange.bind(num1);
+      console.log(checkNumber(10));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    .highlight {
+      display: none;
+      background-color: aquamarine;
+    }
+
+    .blue {
+      background-color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>JQuery</h1>
+  <ul id="liste">
+    <li class="item">JQuery Selector</li>
+    <li>JQuery Methods</li>
+    <li class="item">JQuery Animations</li>
+  </ul>
+  <img src="https://picsum.photos/200/300" alt="" />
+
+  <input id="ad" type="text" placeholder="Fullname" />
+  <input id="soyad" class="blue" type="text" placeholder="lastname"/>
+  <button id="btnKaydet" onclick="adsoyad();">Kaydet</button>
+
+
+
+
+  <script>
+    console.log($("h1").text());
+    console.log($("ul li").text());
+    $("h1").text("Javascript");
+
+    console.log($("input").val());
+    $("input").val("nnnnnn");
+
+
+$("img").attr("width","400");//attribute src gibi özelliklere etki eder
+
+    function adsoyad() {
+      var ad = $("#ad").val();
+      var soyad = $("#soyad").val();
+      console.log("ad soyad: " + ad + " " + soyad);
+      // $("#ad").addClass("highlight");//highlight clasını ad id li etikete ekler
+      $("#ad").toggleClass("highlight"); //highlight ekli ise kaldırır. ekli değil ise ekler
+      $("#soyad").removeClass("blue"); //blue clasını kaldırır.
+    }
+  </script>
+</body>
+
+</html>

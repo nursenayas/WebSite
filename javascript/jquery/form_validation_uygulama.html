@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      #wrapper {
+        width: 600px;
+        margin: 0 auto;
+      }
+      body {
+        font-size: 180%;
+      }
+
+      input {
+        padding: 10px;
+        font-size: 20px;
+        border-radius: 5px;
+        border: 1px solid grey;
+        width: 390px;
+      }
+      label {
+        display: inline-block;
+        width: 170px;
+      }
+
+      .form-group {
+        margin-top: 15px;
+      }
+
+      button {
+        background-color: aquamarine;
+        color: black;
+        padding: 14px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        border: none;
+        margin-top: 20px;
+        width: 100%;
+      }
+
+      .error {
+        color: red;
+        text-align: left;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <div class="error"></div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="text"
+          name="email"
+          id="email"
+          placeholder="Email giriniz "
+        />
+      </div>
+      <div class="form-group">
+        <label for="phone">Telefon</label>
+        <input
+          type="text"
+          name="phone"
+          id="phone"
+          placeholder="telefon no giriniz "
+        />
+      </div>
+      <div class="form-group">
+        <label for="password">Parola</label>
+        <input
+          type="text"
+          name="password"
+          id="password"
+          placeholder="parola gir "
+        />
+      </div>
+      <div class="form-group">
+        <label for="repassword">Parola tekrar</label>
+        <input
+          type="text"
+          name="repassword"
+          id="repassword"
+          placeholder="parola gir"
+        />
+      </div>
+
+      <button id="btn">Kaydet</button>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        function isEmail(email) {
+          var pattern = /^([0-9a-zA-Z]([-_\\.]*[0-9a-zA-Z]+)*)@([0-9a-zA-Z]([-_\\.]*[0-9a-zA-Z]+)*)[\\.]([a-zA-Z]{2,9})$/;
+          return pattern.test(email);
+        }
+
+        $("#btn").click(function () {
+          var errormessage ="";
+          $("#error").html("");                 
+
+
+          if ($("#email").val()=="") {
+            errormessage+="<p> email boş bırakılamaz</p>";
+          }
+          if (isEmail($("#email").val())== false) {
+            errormessage += "<p> hatalı email formatı</p>";
+          }
+
+          if ($("#phone").val() == "") {
+            errormessage += "<p> telefon boş bırakılamaz</p>";
+          }
+          if($.isNumeric($("#phone").val())==false){
+                       errormessage+="<p>telefon alanı düzgün girilmemiş</p>";                        
+                    }
+          
+          if ($("#password").val() == "") {
+            errormessage += "<p> şifre boş bırakılamaz</p>";
+          }
+          if ($("#repassword").val() != $("#password").val()) {
+            errormessage += "<p>parola alanları eşleşmiyor</p>";
+          }
+
+          if ($("#email") != "") {
+            $(".error").html(errormessage);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

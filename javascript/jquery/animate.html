@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      #box {
+        position: absolute;
+        top: 50;
+        left: 10;
+        width: 200px;
+        height: 200px;
+        background-color: blueviolet;
+      }
+    </style>
+  </head>
+
+  <body>
+    <button id="animate">Animate</button>
+    <div id="box">Hello</div>
+
+    <script>
+      $(document).ready(function () {
+        $("#animate").click(function () {
+          var box = $("#box");
+          box.animate(
+            {
+              left: "200px",
+              width: "300px",
+              height: "500px",
+            },
+            2000, //"slow"
+            function () {
+              alert("bitti");
+            }
+          );
+
+box.animate({
+    fontSize: "30px"
+}, 3000);
+
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+    />
+    <title></title>
+    <style>
+      a {
+        color: white;
+      }
+
+      #header {
+        font-size: 25px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script>
+      let val;
+
+      function MultipleByTwo(a, b, c, callback) {
+        let arr = [];
+
+        if (callback && typeof callback === "function") {
+          for (let i = 0; i < 3; i++) {
+            arr[i] = callback(arguments[i] * 2);
+          }
+        }
+        return arr;
+      }
+
+      function addOne(a) {
+        return a + 1;
+      }
+      function addTwo(a) {
+        return a + 2;
+      }
+      function addThree(a) {
+        return a + 3;
+      }
+      // val = MultipleByTwo(5, 6, 8, addTwo);
+      val = MultipleByTwo(5, 6, 8, function (a) {
+        return a + 10;
+      });
+      //val = addOne(9);
+
+      // for (let i = 0; i < val.length; i++) {
+      //   val[i] = addOne(val[i]);
+      // }
+
+      console.log(val);
+    </script>
+  </body>
+</html>

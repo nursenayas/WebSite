@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Advanced Javascript : Objects & Functions</title>
+
+    <style>
+      h1 {
+        font-size: 22px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Advanced Javascript : Objects & Functions</h1>
+
+    <script>
+      //Object literals
+
+      //   let yigit = {
+      //     name: "yiğit",
+      //     yearOfBirth: 2010,
+      //     job: "student"
+      //   }
+
+      /*
+function Person(name,yearOfBirth,job){
+this.name = name;
+this.yearOfBirth =yearOfBirth;
+this.job=job;
+this.calculateAge = function(){
+    return 2022 - this.yearOfBirth;
+}
+
+}
+*/
+
+      let Person = function (name, yearOfBirth, job) {
+        this.name = name;
+        this.yearOfBirth = yearOfBirth;
+        this.job = job;
+        this.calculateAge = function () {
+          return 2022 - this.yearOfBirth;
+        };
+      };
+
+      let yigit = new Person("yiğit", 2011, "student");
+      let emel = new Person("emel", 1997, "teacher");
+
+      console.log(yigit.name);
+      console.log(yigit.job);
+      console.log(yigit.yearOfBirth);
+      console.log(yigit.calculateAge());
+
+      console.log("****************************************************");
+
+      console.log(emel.name);
+      console.log(emel.job);
+      console.log(emel.yearOfBirth);
+      console.log(emel.calculateAge());
+    </script>
+  </body>
+</html>

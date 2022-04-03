@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <title></title>
+  </head>
+
+  <body>
+    <script>
+      //ES5
+      var PersonES5 = function (name, job, yearOfBirth) {
+        this.name = name;
+        this.job = job;
+        this.yearOfBirth = yearOfBirth;
+      };
+
+      PersonES5.prototype.calculateAge = function () {
+        return 2022 - this.yearOfBirth;
+      };
+      var yigit = new PersonES5("yiğit", "student", 2010);
+      console.log(yigit.calculateAge());
+      console.log(yigit);
+
+      //   ES6
+      class PersonES6 {
+        constructor(name, job, yearOfBirth) {
+          this.name = name;
+          this.job = job;
+          this.yearOfBirth = yearOfBirth;
+        }
+
+        calculateAge() {
+          return 2022 - this.yearOfBirth;
+        }
+      }
+      var emel = new PersonES6("emel", "student", 2015);
+      console.log(emel.calculateAge());
+      console.log(emel);
+    </script>
+  </body>
+</html>

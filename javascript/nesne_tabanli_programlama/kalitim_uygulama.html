@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+    />
+    <title></title>
+    <style>
+      a {
+        color: white;
+      }
+
+      #header {
+        font-size: 25px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script>
+      //Person Constructor
+      function Person(name) {
+        this.name = name;
+      }
+
+      Person.prototype.Introduce = function () {
+        console.log("Merhaba benim adım " + this.name);
+      }
+
+      //Teacher Constructor
+      function Teacher(name, branch) {
+        Person.call(this, name);
+        this.branch = branch;
+      }
+
+      Teacher.prototype = Object.create(Person.prototype);
+      Teacher.prototype.constructor = Teacher;
+      Teacher.prototype.teach = function () {
+        console.log("Branşım " + this.branch);
+      }
+
+
+      //Student Constructor
+      function Student(name, number) {
+        Person.call(this, name);
+        this.number = number;
+      }
+      Student.prototype = Object.create(Person.prototype);
+      Student.prototype.constructor = Student;
+      Student.prototype.stud = function () {
+        console.log("Okul Numaram: " + this.number);
+      }
+
+
+//Headmaster Constructor
+function Headmaster(name, branch) {
+        Teacher.call(this, name,branch);
+
+      }
+      Headmaster.prototype = Object.create(Teacher.prototype);
+      Headmaster.prototype.constructor = Headmaster;
+      Headmaster.prototype.ShareTask = function () {
+        console.log("Zaten paylaştırıldı.");
+      }
+
+      let p1 = new Person("Nurşen");
+      p1.Introduce();
+
+      let t1 = new Teacher("Ali", "math");
+      t1.Introduce();
+      t1.teach();
+
+
+      let s1 = new Student("ayşe", 12);
+      s1.Introduce();
+      s1.stud();
+
+      
+      let h1 = new Headmaster("Veli", "physics");
+      h1.Introduce();
+      h1.teach();
+      h1.ShareTask();
+    </script>
+  </body>
+</html>

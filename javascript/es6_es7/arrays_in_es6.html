@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+    />
+    <title></title>
+    <style>
+      .box {
+        height: 150px;
+        width: 150px;
+        margin-bottom: 5px;
+        margin-right: 5px;
+        text-align: center;
+        color: aliceblue;
+      }
+
+      .blue {
+        background-color: blue;
+      }
+      .yellow {
+        background-color: yellow;
+      }
+      .red {
+        background-color: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h3>Modern Javascript : ES6/ ES2015</h3>
+
+    <div class="container">
+      <div class="row">
+        <div class="box blue">I'm blue</div>
+        <div class="box yellow">I'm yellow</div>
+        <div class="box red">I'm red</div>
+      </div>
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+    <script>
+      const boxes = document.querySelectorAll(".box");
+
+      //ES5
+      //   let boxesES5 = Array.prototype.slice.call(boxes);
+
+      // boxesES5.forEach(function(box) {
+      //     box.style.backgroundColor='green';
+      // });
+      // console.log(boxesES5);
+
+      // ES6
+      // Array.from(boxes).forEach(box =>
+      // box.style.backgroundColor='green');
+
+      //ES5
+      //   for (let i = 0; i < boxesES5.length; i++) {
+      //     if (boxesES5[i].className == "box blue") {
+      //       break;
+      //     }
+      //     boxesES5[i].textContent = "I'm changed";
+      //     boxesES5[i].style.backgroundColor = "blue";
+      //   }
+
+      // ES6
+      //   var boxesES6 = Array.from(boxes);
+      //   for (let box of boxesES6) {
+      //     if (box.className == "box blue") {
+      //       continue;
+      //     }
+      //     box.textContent = "I'm changed";
+      //     box.style.backgroundColor = "blue";
+      //   }
+
+      //from
+      // let arr = Array.from('Modern Javascript');
+
+      const products = [
+        { name: "Samsung S8", price: 3000 },
+        { name: "Samsung S8", price: 3000 },
+        { name: "Samsung S7", price: 2000 },
+        { name: "Samsung S6", price: 1000 },
+      ];
+
+      console.log(Array.from(products, (prd) => prd.name == "Samsung S8"));
+
+      console.log(products.find((prd) => prd.name == "Samsung S8"));
+
+      console.log(products.filter((prd) => prd.name == "Samsung S8"));
+
+      console.log(products.findIndex((prd) => prd.price == 2000));
+
+      let numbers = ["a", "b", "c"];
+      let entries = numbers.entries();
+
+      for (let i of entries) {
+        console.log(i);
+      }
+      let keys = numbers.keys();
+
+      for (let i of keys) {
+        console.log(i);
+      }
+      let values = numbers.values();
+      for (let i of values) {
+        console.log(i);
+      }
+    </script>
+  </body>
+</html>

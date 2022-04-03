@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <a href="#">link</a>
+    <h3 id="header">JQuery Dersi</h3>
+    <ul id="liste">
+      <li class="item">JQuery Reference</li>
+      <li>Selector <a href="#">link</a></li>
+      <li class="item">JQuery Plugins</li>
+    </ul>
+
+    <script>
+      document.getElementById("header").style.color = "red"; //javascript
+      $("#header").css("color", "red"); //jquery
+
+      $("#liste a").css("text-decoration", "none");
+      $("a").css("text-decoration", "none");
+
+      var styles = {
+        color: "green",
+        fontSize: "20px",
+        border: "1px solid blue",
+      }; 
+      $("ul li").css(styles);//jquery
+
+
+
+      var listeler = document.querySelectorAll("li");
+      for (var i = 0; i < listeler.length; i++) {
+        listeler[i].style.color = "red";
+      } //javascript
+
+
+      $("a").css({
+        color: "yellow",
+        fontSize: "20px",
+        border: "1px solid green",
+      });
+
+      $(".item").css({
+        display: "none",
+      });
+    </script>
+  </body>
+</html>

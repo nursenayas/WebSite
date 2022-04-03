@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <title></title>
+  </head>
+
+  <body>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+    <script>
+      //ES5
+      function sumES5() {
+        let arr = Array.prototype.slice.call(arguments);
+        let result = 0;
+        arr.forEach(function (item) {
+          result += item;
+        });
+        return result;
+      }
+      console.log(sumES5(10, 20, 50));
+
+      //ES6
+      function sumES6(...arr) {
+        let result = 0;
+        arr.forEach((item) => (result += item));
+        return result;
+      }
+
+      console.log(sumES6(10, 20, 50));
+
+      //ES6
+      function isDriverES6(age, ...years) {
+        years.forEach((year) => console.log(2022 - year >= age));
+      }
+      isDriverES6(18, 1990, 1997, 2000, 2010);
+
+
+      //ES5
+      function isDriverES5() {
+        let years = Array.prototype.slice.call(arguments);
+        years.forEach(function (year) {
+            console.log(2022 - year >= 18);
+        });
+        
+      }
+      isDriverES5(1990, 1997, 2000, 2010);
+
+    </script>
+  </body>
+</html>

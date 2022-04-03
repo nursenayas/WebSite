@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+    />
+    <title></title>
+  </head>
+
+  <body>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script>
+      // ES5
+      // let list = {
+      //   category: "phone",
+      //   names: ["Iphone 8", "Samsung", "Iphone 5"],
+      //   call: function () {
+      //     var self = this;
+      //     this.names.map(function (name) {
+      //       console.log(`${self.category} ${name}`);
+      //     });
+      //   }
+      // }
+
+      // ES6
+      // let list = {
+      //   category: "phone",
+      //   names: ["Iphone 8", "Samsung", "Iphone 5"],
+      //   call: function () {
+      //     this.names.map((name)=> {
+      //       console.log(`${this.category} ${name}`);
+      //     });
+      //   }
+      // }
+      // list.call();
+
+      //ES5
+      //  function Game (){
+
+      //   this.live=0;
+      //   this.addLive= function(){
+      //     var self =this;
+      //     this.OneUp=setInterval(function(){
+      //       console.log(++self.live);
+      //     },1000)
+      //   }
+      //  }
+      //  let player = new Game();
+      //  player.addLive();
+
+      //ES6
+      function Game() {
+        this.live = 0;
+        this.addLive = () => {
+          this.OneUp = setInterval(() => {
+            console.log(++this.live);
+          }, 1000);
+        }
+      }
+      let player = new Game();
+      player.addLive();
+    </script>
+  </body>
+</html>

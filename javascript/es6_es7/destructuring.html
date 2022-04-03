@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <title></title>
+  </head>
+
+  <body>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+    <script>
+      // Destructuring
+
+      //Destructuring assignment
+      var a, b, rest;
+      [a, b] = [10, 20];
+      console.log(a);
+      console.log(b);
+
+      [a, b, ...rest] = [10, 20, 50, 40, 30, 15];
+      console.log(a);
+      console.log(b);
+      console.log(rest);
+
+      ({ a, b } = { a: 10, b: 25 });
+      console.log(a);
+      console.log(b);
+
+      ({ a, b, ...rest } = { a: 10, b: 25, c: 50, d: 40 });
+      console.log(a);
+      console.log(b);
+      console.log(rest);
+
+      // Array Destructuring
+
+      const arrConfig = ["localhost", "8080", "900"];
+
+      //ES5
+      // var server = arrConfig[0];
+      // var port = arrConfig[1];
+      // var timeout = arrConfig[2];
+      // console.log(server,port,timeout);
+
+      // ES6
+      // const [server,port,timeout]=arrConfig;
+      // console.log(server,port,timeout);
+
+      //Object Destructuring
+      const objConfig = {
+        server: "localhost",
+        port: "8080",
+        timeout: 900,
+      };
+      //   var server = objConfig.server;
+      //   var port = objConfig.port;
+      //   var timeout = objConfig.timeout;
+
+      //   const { server, port, timeout } = objConfig;
+      //   console.log(server, port, timeout);
+
+      //   let { timeout: t } = objConfig;
+      //   console.log(t);
+
+      //   let { server, port, timeout=900 } = objConfig;
+      //   console.log(server, port, timeout);
+
+      const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+      const [, , wed, , fri] = days;
+      console.log(wed, fri);
+
+      
+    </script>
+  </body>
+</html>
